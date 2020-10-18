@@ -27,7 +27,7 @@ pipeline {
     
     stage('Test Run') {
       steps {
-        sh 'docker run -d -it cyberfrat:$BUILD_NUMBER'
+        sh 'docker run -d $registry:$BUILD_NUMBER'
       }
     }
   }
